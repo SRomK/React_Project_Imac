@@ -1,11 +1,11 @@
 import React from 'react';
 import { TodoItem } from './TodoItem';
 
-export function TodoList({ todos }) {
+export function TodoList({ todos, toggleTodo }) {
     return (
         <ul>
             {todos.map((todo) => (
-                <TodoItem todo={todo} /> /*estamos inclyendo un componente por cada elemento del array */
+                <TodoItem key={todo.id} todo={todo} toggleTodo={toggleTodo} /> /*estamos inclyendo un componente por cada elemento del array */
             ))}
         </ul>
     );
